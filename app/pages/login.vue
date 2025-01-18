@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+    const config = useRuntimeConfig()
     // Static Meta Data
     definePageMeta({
         title: "Nuxt - Login",
@@ -43,14 +43,14 @@
         const mockUser = { email: email.value, password: password.value };
         if (validateForm()) {
             try {
-                const response = await fetch('https://fakestoreapi.com/auth/login', {
+                const response = await fetch(config.public.LOGIN_URL, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        username: "johnd", 
-                        password: "m38rmF$", 
+                        username: config.public.LOGIN_USERNAME , 
+                        password: config.public.LOGIN_PASSWORD , 
                     }),
                 });
 
@@ -60,7 +60,7 @@
                     localStorage.setItem('authToken', data.token);
                     loginSuccess.value = true;
                     setTimeout(() => {
-                        router.push('/');
+                        router.push('/product');
                     }, 2000);
                 } else {
                     loginError.value = 'Invalid credentials. Please try again.';

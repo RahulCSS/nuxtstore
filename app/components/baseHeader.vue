@@ -12,12 +12,21 @@
 
                 <!-- Search Section-->
                 <div class="flex flex-grow mx-4 relative items-center gap-2">
-                    <input
-                    type="text"
-                    placeholder="Search..."
-                    class="w-full px-4 py-2 bg-zinc-800 text-white rounded-full focus:outline-none"
-                    />
-                    <search />
+                    <div class="relative w-full">
+                        <input
+                            type="text"
+                            placeholder="Search..."
+                            class="w-full pl-10 pr-4 py-2 bg-zinc-800 text-white rounded-full focus:outline-none"
+                        />
+                        <NuxtImg 
+                            width="20px" 
+                            density="2x" 
+                            format="webp" 
+                            src="/search.png" 
+                            alt="" 
+                            class="absolute left-3 top-1/2 transform -translate-y-1/2 pointer-events-none"
+                        />
+                    </div>
                 </div>
 
                 <!-- Navigation Section-->

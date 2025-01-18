@@ -49,4 +49,11 @@ export default defineNuxtConfig({
     exposeConfig: true,
   },
 
+  runtimeConfig: {
+    public: {
+      LOGIN_URL: process.env.LOGIN_URL,
+      LOGIN_USERNAME: process.env.LOGIN_USERNAME,
+      LOGIN_PASSWORD: process.env.LOGIN_PASSWORD,
+    }
+  },
 })

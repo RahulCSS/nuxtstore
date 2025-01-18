@@ -4,6 +4,7 @@
     definePageMeta({
         title: "Nuxt - HomePage",
         description: "Experience Nuxt",
+        middleware: 'auth'
     });
 
 </script>
