@@ -81,7 +81,7 @@
             <NuxtImg width="128px" density="2x" format="webp" src="/logo-green-white.png" alt=""/>
             <h1 class="text-white font-bold text-xl mt-8"> Experience the Nuxt Store</h1>
             <p class="text-zinc-300 text-m mt-1">Not registered? 
-                <NuxtLink to ="/">
+                <NuxtLink to ="/signup">
                     <span class="font-bold underline text-green-400">Sign up</span> for a free account
                 </NuxtLink>
             </p>
