@@ -40,3 +40,9 @@ _npm_
 ```bash
 npx nuxi@latest module add image
 ```
+
+Adding nuxt ui\
+_npm_
+```bash
+npx nuxi@latest module add ui
+```
