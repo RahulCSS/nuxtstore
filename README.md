@@ -6,31 +6,37 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ## Setup
 
 Use the following command to create a new starter project\
-npm
+_npm_
 ```bash
 npx nuxi@latest init <project-name>
 ```
 
 Automate to Nuxt version 4 migration by running\
-npm
+_npm_
 ```bash
 npx codemod@latest nuxt/4/file-structure
 ```
 
 Adding Tailwind CSS\
-npm
+_npm_
 ```bash
 npx nuxi@latest module add tailwindcss
 ```
 
 Adding Google Fonts\
-npm
+_npm_
 ```bash
 npx nuxi@latest module add google-fonts
 ```
 
 Adding nuxt icons\
-npm
+_npm_
 ```bash
 npx nuxi module add icon
+```
+
+Adding nuxt image optimizer\
+_npm_
+```bash
+npx nuxi@latest module add image
 ```
