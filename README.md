@@ -17,3 +17,14 @@ npm
 npx codemod@latest nuxt/4/file-structure
 ```
 
+Adding Tailwind CSS
+npm
+```bash
+npx nuxi@latest module add tailwindcss
+```
+
+Adding Goodle Fonts
+npm
+```bash
+npx nuxi@latest module add google-fonts
+```
