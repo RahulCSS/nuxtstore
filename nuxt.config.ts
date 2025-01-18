@@ -36,4 +36,15 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
   ],
+
+  googleFonts: {
+    families: {
+      Montserrat: true,
+    }
+  },
+
+  tailwindcss: {
+    configPath: 'tailwind.config.js', 
+    exposeConfig: true,
+  },
 })
