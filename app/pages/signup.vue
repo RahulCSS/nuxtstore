@@ -4,7 +4,7 @@
     definePageMeta({
         title: "Nuxt - Signup",
         description: "Signup to experience Nuxt",
-        layout: 'empty',
+        layout: false,
     });
 
     const email = ref('')
