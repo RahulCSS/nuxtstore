@@ -1,75 +1,19 @@
-# Nuxt Minimal Starter
+# Nuxt Store
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
 ## Setup
 
-Make sure to install dependencies:
-
+Use the following command to create a new starter project
+npm
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npx nuxi@latest init <project-name>
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
+Automate to Nuxt version 4 migration by running 
+npm
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+npx codemod@latest nuxt/4/file-structure
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
