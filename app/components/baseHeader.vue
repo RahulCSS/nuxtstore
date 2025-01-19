@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+    
 </script>
 
 <template>
@@ -32,20 +32,21 @@
                 <!-- Navigation Section-->
                 <ul class="flex gap-6 ml-auto text-xl font-bold">
                     <li>
-                        <NuxtLink class="text-white font-bold text-xl" to="/">Home</NuxtLink>
+                        <NuxtLink class="text-white text-xl" to="/product">Home</NuxtLink>
                     </li>
                     <li>
-                        <NuxtLink class="text-white font-bold text-xl" to="/about">About</NuxtLink>
+                        <NuxtLink class="text-white text-xl" to="/about">About</NuxtLink>
                     </li>
                     <li>
-                        <span class="text-white font-bold text-xl"> Orders</span>
+                        <NuxtLink class="text-white text-xl" to="/orders">Orders</NuxtLink>
                     </li>
                     <li>
-                        <span class="text-white font-bold text-xl">Profile</span>
+                        <span class="text-white text-xl">Profile</span>
                     </li>
                     <li>
-                        <span class="text-white font-bold text-xl">Cart</span>
+                        <span class="text-white text-xl">Cart</span>
                     </li>
+                    
                 </ul>
             </nav>
         </header>
