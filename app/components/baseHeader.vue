@@ -1,5 +1,8 @@
 <script setup lang="ts">
-    
+    const logout = () => {
+        localStorage.removeItem('authToken');
+        navigateTo('/login');
+    };
 </script>
 
 <template>
@@ -46,7 +49,15 @@
                     <li>
                         <span class="text-white text-xl">Cart</span>
                     </li>
-                    
+                    <button @click="logout">
+                        <NuxtImg 
+                                width="20px" 
+                                density="2x" 
+                                format="webp" 
+                                src="/logout-rounded.png" 
+                                alt="" 
+                            />
+                    </button>
                 </ul>
             </nav>
         </header>
