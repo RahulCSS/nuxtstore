@@ -1,7 +1,9 @@
 <script setup lang="ts">
     const logout = () => {
-        localStorage.removeItem('authToken');
-        navigateTo('/login');
+        setTimeout(()=>{
+            localStorage.removeItem('authToken');
+            navigateTo('/login');
+        },1000);
     };
 </script>
 
