@@ -46,3 +46,47 @@ _npm_
 ```bash
 npx nuxi@latest module add ui
 ```
+## Configuration
+
+Nuxt is an open source framework that makes web development intuitive and powerful.
+
+Upgrade to Nuxt 4 promises significant upgrade over Nuxt 3 especially via folder structure modification.\
+
+app.vue
+```bash
+<div class=>
+    <NuxtLoadingIndicator />
+    <NuxtLayout>
+      <NuxtPage/>
+    </NuxtLayout>
+  </div>
+```
+- <NuxtPage/> is a built-in component that comes with Nuxt. It lets you display top-level or nested pages located in the _pages_ directory.
+- <NuxtLayout /> component is used to show layouts on pages and error pages
+- <NuxtLoadingIndicator /> Display a progress bar between page navigations.
+
+```bash
+definePageMeta({
+        title: "Nuxt - Login",
+        description: "Login to experience Nuxt",
+        layout:false,
+        middleware: 'auth'
+    });
+```
+definePageMeta is a compiler macro that you can use to set metadata for your page components located in the pages directory 
+
+- layout property defines the layour for the page with default layout and other layout located in layout directory. With false value, layout wont be set to specific page.
+
+- middleware property works same as layout. With respect to set value, middleware set according from the middlware located in directory. 
+
+layout/default.vue
+```bash
+    <div>
+        <Header />
+            <slot />
+        <Footer />
+    </div>
+```
+The <slot> element is a slot outlet that indicates where the parent-provided slot content should be rendered.
+The page component will be rendered in <slot/>
+In this case <Header> & <Footer> components are displayed on pages with layout propery set to default
