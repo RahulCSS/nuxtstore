@@ -49,7 +49,6 @@ npx nuxi@latest module add ui
 ## Configuration
 
 Nuxt is an open source framework that makes web development intuitive and powerful.
-
 Upgrade to Nuxt 4 promises significant upgrade over Nuxt 3 especially via folder structure modification.\
 
 app.vue
@@ -90,3 +89,30 @@ layout/default.vue
 The <slot> element is a slot outlet that indicates where the parent-provided slot content should be rendered.
 The page component will be rendered in <slot/>
 In this case <Header> & <Footer> components are displayed on pages with layout propery set to default
+
+```bash
+const { data: products } = await useFetch('https://fakestoreapi.com/products');
+```
+Fetch data from an API endpoint with an SSR-friendly composable.
+This composable provides a convenient wrapper around useAsyncData and $fetch. It automatically generates a key based on URL and fetch options, provides type hints for request url based on server routes, and infers API response type.
+
+```bash
+const response = await useFetch(config.public.LOGIN_URL);
+    username: config.public.LOGIN_USERNAME 
+    password: config.public.LOGIN_PASSWORD 
+```
+To hide exposed URL, username, password. Variables are stored in .env .
+Environment variables set there will be accessible within your nuxt.config file and modules.
+
+```bash
+    export default defineNuxtRouteMiddleware(() => {
+    if (import.meta.client) {
+        const authToken = 'authToken';  
+    if (!localStorage.getItem(authToken)) {
+        return navigateTo('/login');
+      }
+    }
+  })
+```
+In order to avoid any user access producty listing without login. authToken is cheked via middleware.\
+Even accessing link direcly will force user to login page to proper authentication.
